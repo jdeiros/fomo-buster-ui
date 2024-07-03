@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ConcertService } from '../../../concert.service';
+import { ConcertService } from '../../services/concert.service';
 
 @Component({
-  selector: 'app-concert-list',
+  selector: 'concert-list',
   templateUrl: './concert-list.component.html',
   styleUrls: ['./concert-list.component.scss']
 })
