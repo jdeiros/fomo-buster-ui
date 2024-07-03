@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
 
+note:
+In Angular v17 or higher by default projects work without modules (no modules)
+But to work in a traditional way, we've created the app as follow:
+
+Run `ng new <application name> --standalone false`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -46,4 +52,6 @@ To deploy on GitHub Pages into the `docs` folder, you can follow these steps:
 Remember to replace `<username>` with your GitHub username and `<repository-name>` with the name of your repository.
 
 That's it! Your Angular app will now be deployed on GitHub Pages.
+
+
 
