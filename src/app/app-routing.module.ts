@@ -4,12 +4,14 @@ import { ConcertListComponent } from './concert-list/concert-list.component';
 import { ConcertDetailComponent } from './concert-detail/concert-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { AddConcertComponent } from './add-concert/add-concert.component';
 
 const routes: Routes = [
   { path: '', component: ConcertListComponent },
   { path: 'concert/:id', component: ConcertDetailComponent },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'confirmation', component: ConfirmationComponent }
+  { path: 'confirmation', component: ConfirmationComponent },
+  { path: 'add', component: AddConcertComponent },
 ];
 
 @NgModule({

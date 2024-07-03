@@ -7,6 +7,8 @@ import { ConcertListComponent } from './concert-list/concert-list.component';
 import { ConcertDetailComponent } from './concert-detail/concert-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { AddConcertComponent } from './add-concert/add-concert.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     ConcertListComponent,
     ConcertDetailComponent,
     CheckoutComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    AddConcertComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

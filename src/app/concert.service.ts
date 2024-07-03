@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-interface Concert {
+export interface Concert {
   id: number;
   name: string;
   date: string;
@@ -15,14 +15,18 @@ export class ConcertService {
   private concerts: Concert[] = [
     { id: 1, name: 'Rock Festival', date: '2024-08-15', price: 50 },
     { id: 2, name: 'Jazz Night', date: '2024-09-20', price: 35 },
-    // Agrega más conciertos aquí
   ];
 
+  private concertsSubject = new BehaviorSubject<Concert[]>(this.concerts);
+
   getConcerts(): Observable<Concert[]> {
-    return of(this.concerts);
+    return this.concertsSubject.asObservable();
   }
 
-  getConcert(id: number): Observable<Concert | undefined> {
-    return of(this.concerts.find(concert => concert.id === id));
+  addConcert(concert: Omit<Concert, 'id'>): void {
+    const newId = Math.max(...this.concerts.map(c => c.id), 0) + 1;
+    const newConcert = { ...concert, id: newId };
+    this.concerts.push(newConcert);
+    this.concertsSubject.next(this.concerts);
   }
 }
