@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConcertListComponent } from './concert-list/concert-list.component';
-import { ConcertDetailComponent } from './concert-detail/concert-detail.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { ConfirmationComponent } from './confirmation/confirmation.component';
-import { AddConcertComponent } from './add-concert/add-concert.component';
+import { ConcertListComponent } from './fomo-buster/components/concert-list/concert-list.component';
+import { ConcertDetailComponent } from './fomo-buster/components/concert-detail/concert-detail.component';
+import { CheckoutComponent } from './fomo-buster/components/checkout/checkout.component';
+import { ConfirmationComponent } from './fomo-buster/components/confirmation/confirmation.component';
+import { AddConcertComponent } from './fomo-buster/components/add-concert/add-concert.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
+import { HomePageComponent } from './fomo-buster/pages/home/home-page.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { FormsModule } from '@angular/forms';
     ConcertDetailComponent,
     CheckoutComponent,
     ConfirmationComponent,
-    AddConcertComponent
+    AddConcertComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

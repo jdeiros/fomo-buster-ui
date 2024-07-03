@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ConcertService } from '../concert.service';
+import { ConcertService } from '../../../concert.service';
 
 @Component({
   selector: 'app-add-concert',

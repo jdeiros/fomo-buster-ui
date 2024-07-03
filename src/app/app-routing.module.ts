@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConcertListComponent } from './concert-list/concert-list.component';
-import { ConcertDetailComponent } from './concert-detail/concert-detail.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { ConfirmationComponent } from './confirmation/confirmation.component';
-import { AddConcertComponent } from './add-concert/add-concert.component';
+import { ConcertListComponent } from './fomo-buster/components/concert-list/concert-list.component';
+import { ConcertDetailComponent } from './fomo-buster/components/concert-detail/concert-detail.component';
+import { CheckoutComponent } from './fomo-buster/components/checkout/checkout.component';
+import { ConfirmationComponent } from './fomo-buster/components/confirmation/confirmation.component';
+import { AddConcertComponent } from './fomo-buster/components/add-concert/add-concert.component';
 
 const routes: Routes = [
   { path: '', component: ConcertListComponent },
